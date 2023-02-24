@@ -4,17 +4,21 @@ body{
     background-color: #5E548E;
 }
 .container{
-    height: 500px;
+    /* height: 42px; */
+    display: flex;
+    flex-direction: column;
+    /* height: 520px;  */
     background-color: #fff;
     border-radius: 16px;
-    width: 380px;
+    width: 350px;
     margin: 40px auto;
     padding: 20px;
 }
+
+
 .search-bar{
     display: flex;
     justify-content: flex-start;
-    margin: auto;
     border-radius: 16px;
 }
 .search-bar .pin{
@@ -42,10 +46,34 @@ body{
     border-radius: 100px;
     padding: 8px 10px;
 }
+
 .not-found{
+    margin: 40px 0;
+    text-align: center;
+}
+.not-found img{
+    width: 70%;
+}
+.not-found p{
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.weather-box img{
+    width: 70%;
+}
+.weather-box span{
+    font-size: 40px;
+    font-weight: 700;
+}
+.weather-box p{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+
+.weather-details{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    justify-content: space-between;
 }
