@@ -3,6 +3,9 @@ body{
     font-family: 'Raleway', sans-serif;
     background-color: #5E548E;
 }
+img{
+    display: block;
+}
 .container{
     /* height: 42px; */
     display: flex;
@@ -31,6 +34,7 @@ body{
     width: 80%;
     padding: 10px;
     margin-left: 10px;
+    text-transform: uppercase;
 }
 .search-bar input:active, .search-bar input:focus{
     border: none;
@@ -39,17 +43,59 @@ body{
 .search-bar input::placeholder{
     color: #0A0F0D;
     font-size: 16px;
+    text-transform: capitalize;
 }
 .search-bar button{
     border: none;
     background: #B2CEDE;
     border-radius: 100px;
-    padding: 8px 10px;
+    padding: 16px;
     transition: 0.4s ease-in-out;
 }
 .search-bar button:hover{
     color: white;
-    background: #fff;
+    background: #0A0F0D;
+}
+
+
+.weather-box{
+    display: none;
+    flex-direction: column;
+    text-align: center;
+}
+.weather-box img{
+    width: 60%;
+    margin: 30px auto;
+}
+.weather-box span{
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.weather-box p{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+
+.weather-details{
+    display: none;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.humidity, .wind{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+.wind-details, .humidity-details{
+    margin-left: 10px;
+}
+.humidity{
+    justify-content: flex-start;
+}
+.wind{
+    justify-content: flex-end;
 }
 
 .not-found{
@@ -66,24 +112,21 @@ body{
     font-size: 30px;
     font-weight: 600;
 }
-.weather-box{
-    display: none;
-    flex-direction: column;
-}
-.weather-box img{
-    width: 70%;
-}
-.weather-box span{
-    font-size: 40px;
-    font-weight: 700;
-}
-.weather-box p{
-    font-size: 30px;
-    font-weight: 600;
+
+.fadeIn{
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
 }
 
+@keyframes fadeIn{
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
 
-.weather-details{
-    display: none;
-    justify-content: space-between;
+@media screen and (max-width: 500px){
+    .container{
+        width: 300px;
+    }
 }
