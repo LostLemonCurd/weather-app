@@ -1,0 +1,10 @@
+let city = document.querySelector('.search-bar>input');
+console.log(city);
+let notFound = document.querySelector('.not-found');
+console.log(notFound);
+let weatherBox = document.querySelector('.weather-box');
+console.log(weatherBox);
+let wind = document.querySelector('.wind');
+console.log(wind);
+let humidity = document.querySelector('.humidity');
+console.log(humidity);
