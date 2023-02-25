@@ -77,22 +77,27 @@ search.addEventListener('click', () => {
                 case 'Clear':
                     console.log('clear');
                     tempImg.src = 'img/clear.png';
+                    advice.innerHTML = 'N\'oubliez pas vos lunettes de soleil!';
                 break;
                 case 'Rain':
                     console.log('rain');
                     tempImg.src = 'img/rain.png';
+                    advice.innerHTML = 'N\'oubliez pas votre parapluie!';
                 break;
                 case 'Clouds':
                     console.log('clouds');
                     tempImg.src = 'img/cloud.png';
+                    advice.innerHTML = 'N\'oubliez pas votre veste!';
                 break;
                 case 'Snow':
                     console.log('snow');
                     tempImg.src = 'img/snow.png';
+                    advice.innerHTML = 'N\'oubliez pas votre parka!';
                 break;
                 case 'Haze':
                     console.log('haze');
-                    tempImg.src = 'img/haze.png';
+                    tempImg.src = 'img/mist.png';
+                    advice.innerHTML = 'N\'oubliez pas de bien essuyer vos lunettes!';
                 break;
                 default:
                     console.log('default');
@@ -135,34 +140,40 @@ search.addEventListener('click', () => {
             console.log(tempDetail);
             const humidity = document.querySelector('.humidity > .humidity-details > span');
             const wind = document.querySelector('.wind > .wind-details > span');
-    
+            const advice = document.querySelector('.advice');
+
             switch(json.weather[0].main){
                 case 'Clear':
                     console.log('clear');
                     tempImg.src = 'img/clear.png';
+                    advice.innerHTML = 'Don\'t forget your sunglasses!';
                 break;
                 case 'Rain':
                     console.log('rain');
                     tempImg.src = 'img/rain.png';
+                    advice.innerHTML = 'Don\'t forget your umbrella!';
                 break;
                 case 'Clouds':
                     console.log('clouds');
                     tempImg.src = 'img/cloud.png';
+                    advice.innerHTML = 'Don\'t forget to wear a jacket!';
                 break;
                 case 'Snow':
                     console.log('snow');
                     tempImg.src = 'img/snow.png';
+                    advice.innerHTML = 'Don\'t forget your warm coat!';
                 break;
                 case 'Haze':
                     console.log('haze');
-                    tempImg.src = 'img/haze.png';
+                    tempImg.src = 'img/mist.png';
+                    advice.innerHTML = 'Don\'t forget to check both ways before crossing!';
                 break;
                 default:
                     console.log('default');
                     tempImg.src = '';
                 break;
             }
-    
+
             temp.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
             tempDetail.innerHTML = `${json.weather[0].description}`;
             humidity.innerHTML = `${json.main.humidity}%`;
