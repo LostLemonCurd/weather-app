@@ -6,13 +6,31 @@ body{
 img{
     display: block;
 }
+.language{
+    display: flex;
+    justify-content: space-between;
+    width: 90px;
+    padding: 20px;
+
+}
+.language .fr, .language .en{
+    border: none;
+    background-color: #fff;
+    border-radius: 100px;
+    padding: 10px;
+    font-weight: 600;
+}
+.language .fr:hover, .language .en:hover{
+    background-color: #0A0F0D;
+    color: #fff;
+}
 .container{
     display: flex;
     flex-direction: column;
     background-color: #fff;
     border-radius: 16px;
     width: 350px;
-    margin: 140px auto;
+    margin: auto;
     padding: 20px;
 }
 
@@ -28,7 +46,7 @@ img{
 .search-bar input{
     border: none;
     color: #0A0F0D;
-    font-size: 16px;
+    font-size: 20px;
     width: 80%;
     padding: 10px;
     margin-left: 10px;
@@ -40,19 +58,22 @@ img{
 }
 .search-bar input::placeholder{
     color: #0A0F0D;
-    font-size: 16px;
+    font-size: 20px;
     text-transform: capitalize;
 }
 .search-bar button{
     border: none;
-    background: #B2CEDE;
+    background: #0A0F0D;
+    color: #fff;
     border-radius: 100px;
     padding: 16px;
-    transition: 0.4s ease-in-out;
+    transition: 0.2s ease-in;
 }
 .search-bar button:hover{
-    color: white;
-    background: #0A0F0D;
+    color: #0A0F0D;
+    background: #fff;
+    padding: 15px;
+    border: 2px solid #0A0F0D;
 }
 
 
@@ -65,21 +86,22 @@ img{
     width: 60%;
     margin: 30px auto;
 }
-.weather-box span{
-    font-size: 40px;
+.weather-box .temperature{
+    font-size: 60px;
     font-weight: 700;
-    margin-bottom: 20px;
 }
 .weather-box p{
     font-size: 30px;
     font-weight: 600;
+    text-transform: capitalize;
+    margin-top: 28px;
 }
 
 
 .weather-details{
     display: none;
     justify-content: space-between;
-    margin-top: 20px;
+    margin: 40px 0 20px;
 }
 .humidity, .wind{
     display: flex;
@@ -115,7 +137,9 @@ img{
     animation: 0.5s fadeIn forwards;
     animation-delay: 0.5s;
 }
-
+.active{
+    border: 0;
+}
 @keyframes fadeIn{
     to {
         scale: 1;
@@ -124,7 +148,11 @@ img{
 }
 
 @media screen and (max-width: 500px){
+    .language{
+        margin: auto;
+    }
     .container{
         width: 300px;
+        margin-top: 80px;
     }
 }
