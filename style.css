@@ -15,15 +15,16 @@ img{
 }
 .language .fr, .language .en{
     border: none;
-    background-color: #fff;
+    background: #fff;
     border-radius: 100px;
     padding: 10px;
     font-weight: 600;
 }
 .language .fr:hover, .language .en:hover{
-    background-color: #0A0F0D;
+    background: #0A0F0D;
     color: #fff;
 }
+
 .container{
     display: flex;
     flex-direction: column;
@@ -153,6 +154,12 @@ img{
     }
     .container{
         width: 300px;
-        margin-top: 40px;
+        margin: 40px auto;
+    }
+    .weather-box .temperature{
+        font-size: 30px;
+    }
+    .weather-box p{
+        font-size: 24px;
     }
 }

@@ -6,6 +6,10 @@ console.log(en);
 fr.addEventListener('click', () => {
     fr.classList.add('active');
     en.classList.remove('active');
+    fr.style.background = '#0A0F0D';
+    fr.style.color = '#fff';
+    en.style.color = '#0A0F0D';
+    en.style.background = '#fff';
     var cityInput = document.querySelector('.search-bar input');
     cityInput.placeholder = 'Entrez une ville'
     var humidityFr = document.querySelector('.humidity-details > p');
@@ -17,6 +21,10 @@ fr.addEventListener('click', () => {
 en.addEventListener('click', () => {
     en.classList.add('active');
     fr.classList.remove('active');
+    en.style.background = '#0A0F0D';
+    en.style.color = '#fff';
+    fr.style.color = '#0A0F0D';
+    fr.style.background = '#fff';
     var cityInput = document.querySelector('.search-bar input');
     cityInput.placeholder = 'Enter your location'
     var humidityEn = document.querySelector('.humidity-details > p');
@@ -25,12 +33,14 @@ en.addEventListener('click', () => {
     windEn.textContent = 'Wind Speed'
 })
 
+
 const container = document.querySelector('.container');
 console.log(container);
 const search = document.querySelector('.search-bar>button');
 console.log(search);
 const error404 = document.querySelector('.not-found');
 console.log(error404);
+const para404 = document.querySelector('.not-found > p');
 const weatherBox = document.querySelector('.weather-box');
 console.log(weatherBox);
 const weatherDetails = document.querySelector('.weather-details');
@@ -58,6 +68,7 @@ search.addEventListener('click', () => {
                 weatherBox.style.display = 'none';
                 error404.style.display = 'block';
                 error404.classList.add('fadeIn');
+                para404.innerHTML = '404: Cette ville n\'existe pas';
                 return;
             }
     
@@ -72,34 +83,27 @@ search.addEventListener('click', () => {
             console.log(tempDetail);
             const humidity = document.querySelector('.humidity > .humidity-details > span');
             const wind = document.querySelector('.wind > .wind-details > span');
-            const advice = document.querySelector('.advice');
-
     
             switch(json.weather[0].main){
                 case 'Clear':
                     console.log('clear');
                     tempImg.src = 'img/clear.png';
-                    advice.innerHTML = 'N\'oubliez pas vos lunettes de soleil!';
                 break;
                 case 'Rain':
                     console.log('rain');
                     tempImg.src = 'img/rain.png';
-                    advice.innerHTML = 'N\'oubliez pas votre parapluie!';
                 break;
                 case 'Clouds':
                     console.log('clouds');
                     tempImg.src = 'img/cloud.png';
-                    advice.innerHTML = 'N\'oubliez pas votre veste!';
                 break;
                 case 'Snow':
                     console.log('snow');
                     tempImg.src = 'img/snow.png';
-                    advice.innerHTML = 'N\'oubliez pas votre parka!';
                 break;
                 case 'Haze':
                     console.log('haze');
                     tempImg.src = 'img/mist.png';
-                    advice.innerHTML = 'N\'oubliez pas de bien essuyer vos lunettes!';
                 break;
                 default:
                     console.log('default');
@@ -142,33 +146,27 @@ search.addEventListener('click', () => {
             console.log(tempDetail);
             const humidity = document.querySelector('.humidity > .humidity-details > span');
             const wind = document.querySelector('.wind > .wind-details > span');
-            const advice = document.querySelector('.advice');
 
             switch(json.weather[0].main){
                 case 'Clear':
                     console.log('clear');
                     tempImg.src = 'img/clear.png';
-                    advice.innerHTML = 'Don\'t forget your sunglasses!';
                 break;
                 case 'Rain':
                     console.log('rain');
                     tempImg.src = 'img/rain.png';
-                    advice.innerHTML = 'Don\'t forget your umbrella!';
                 break;
                 case 'Clouds':
                     console.log('clouds');
                     tempImg.src = 'img/cloud.png';
-                    advice.innerHTML = 'Don\'t forget to wear a jacket!';
                 break;
                 case 'Snow':
                     console.log('snow');
                     tempImg.src = 'img/snow.png';
-                    advice.innerHTML = 'Don\'t forget your warm coat!';
                 break;
                 case 'Haze':
                     console.log('haze');
                     tempImg.src = 'img/mist.png';
-                    advice.innerHTML = 'Don\'t forget to check both ways before crossing!';
                 break;
                 default:
                     console.log('default');
