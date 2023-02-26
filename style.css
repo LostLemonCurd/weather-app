@@ -165,4 +165,7 @@ img{
     .weather-box p{
         font-size: 24px;
     }
+    .weather-details{
+        font-size: 12px;
+    }
 }
