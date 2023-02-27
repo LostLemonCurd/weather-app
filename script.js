@@ -87,23 +87,23 @@ search.addEventListener('click', () => {
             switch(json.weather[0].main){
                 case 'Clear':
                     console.log('clear');
-                    tempImg.src = 'img/clear.png';
+                    tempImg.src = `http://openweathermap.org/img/wn/${json.weather[0].icon}@4x.png`;
                 break;
                 case 'Rain':
                     console.log('rain');
-                    tempImg.src = 'img/rain.png';
+                    tempImg.src = `http://openweathermap.org/img/wn/${json.weather[0].icon}@4x.png`;
                 break;
                 case 'Clouds':
                     console.log('clouds');
-                    tempImg.src = 'img/cloud.png';
+                    tempImg.src = `http://openweathermap.org/img/wn/${json.weather[0].icon}@4x.png`;
                 break;
                 case 'Snow':
                     console.log('snow');
-                    tempImg.src = 'img/snow.png';
+                    tempImg.src = `http://openweathermap.org/img/wn/${json.weather[0].icon}@4x.png`;
                 break;
                 case 'Haze':
                     console.log('haze');
-                    tempImg.src = 'img/mist.png';
+                    tempImg.src = `http://openweathermap.org/img/wn/${json.weather[0].icon}@4x.png`;
                 break;
                 default:
                     console.log('default');
@@ -150,27 +150,22 @@ search.addEventListener('click', () => {
             switch(json.weather[0].main){
                 case 'Clear':
                     console.log('clear');
-                    // tempImg.src = 'img/clear.png';
                     tempImg.src = `http://openweathermap.org/img/wn/${json.weather[0].icon}@4x.png`;
                 break;
                 case 'Rain':
                     console.log('rain');
-                    // tempImg.src = 'img/rain.png';
                     tempImg.src = `http://openweathermap.org/img/wn/${json.weather[0].icon}@4x.png`;
                 break;
                 case 'Clouds':
                     console.log('clouds');
-                    // tempImg.src = 'img/cloud.png';
                     tempImg.src = `http://openweathermap.org/img/wn/${json.weather[0].icon}@4x.png`;
                 break;
                 case 'Snow':
                     console.log('snow');
-                    // tempImg.src = 'img/snow.png';
                     tempImg.src = `http://openweathermap.org/img/wn/${json.weather[0].icon}@4x.png`;
                 break;
                 case 'Haze':
                     console.log('haze');
-                    // tempImg.src = 'img/mist.png';
                     tempImg.src = `http://openweathermap.org/img/wn/${json.weather[0].icon}@4x.png`;
                 break;
                 default:
