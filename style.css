@@ -86,8 +86,7 @@ img{
     text-align: center;
 }
 .weather-box img{
-    width: 60%;
-    margin: 20px auto;
+    margin: auto;
 }
 .weather-box .temperature{
     font-size: 60px;
