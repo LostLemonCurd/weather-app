@@ -127,6 +127,8 @@ img{
 }
 .not-found img{
     width: 70%;
+    margin: auto;
+    text-align: center;
 }
 .not-found p{
     display: inline-block;
