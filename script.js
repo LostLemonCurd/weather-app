@@ -10,11 +10,11 @@ fr.addEventListener('click', () => {
     fr.style.color = '#fff';
     en.style.color = '#0A0F0D';
     en.style.background = '#fff';
-    var cityInput = document.querySelector('.search-bar input');
+    let cityInput = document.querySelector('.search-bar input');
     cityInput.placeholder = 'Entrez une ville'
-    var humidityFr = document.querySelector('.humidity-details > p');
+    let humidityFr = document.querySelector('.humidity-details > p');
     humidityFr.textContent = 'Humidité'
-    var windFr = document.querySelector('.wind-details > p');
+    let windFr = document.querySelector('.wind-details > p');
     windFr.textContent = 'Vitesse du Vent'
     
 })
@@ -25,11 +25,11 @@ en.addEventListener('click', () => {
     en.style.color = '#fff';
     fr.style.color = '#0A0F0D';
     fr.style.background = '#fff';
-    var cityInput = document.querySelector('.search-bar input');
+    let cityInput = document.querySelector('.search-bar input');
     cityInput.placeholder = 'Enter your location'
-    var humidityEn = document.querySelector('.humidity-details > p');
+    let humidityEn = document.querySelector('.humidity-details > p');
     humidityEn.textContent = 'Humidity'
-    var windEn = document.querySelector('.wind-details > p');
+    let windEn = document.querySelector('.wind-details > p');
     windEn.textContent = 'Wind Speed'
 })
 
